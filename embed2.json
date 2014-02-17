@@ -1,0 +1,6 @@
+{
+  "stylesheets": [
+    "https://players.brightcove.com/videojs/plugins/videojs-ima3/1.1.0/videojs.ima3.min.css",
+    "https://players.brightcove.com/2335723943001/service-webinar/alternate.css"
+  ]
+}
