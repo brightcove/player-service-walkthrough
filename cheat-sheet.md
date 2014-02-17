@@ -44,7 +44,7 @@ export PLAYER=ad40ec13-dcc3-47e8-8465-4d60b4917bac
 
 If you want, you can paste the `preview_url` into your web browser to see what the player looks like before we start customizing it.
 
-The question you're surely asking now is, how do I get my video in there? To do that, we're going to have to create some configuration for our player. Open up your text editor and type (or copy) in this [JSON](http://www.json.org/):
+The question you're surely asking now is, how do I get my video in there? To do that, we're going to have to create some configuration for our player. Open up your text editor and type (or copy) this [JSON](http://www.json.org/) into a file called config.json:
 
 ```json
 {
@@ -70,7 +70,7 @@ curl --user $EMAIL -d @config.json -X PATCH -H "Content-Type: application/json" 
 
 Try opening up the `preview_url` in a browser to make sure everything worked.
 
-It's time to get rid of that watermark and create the optimized version of the player for production. Fire this curl command to kick that off:
+It's time to get rid of that watermark and create the optimized version of the player for production. Run this curl command to kick that off:
 
 ```sh
 curl --user $EMAIL -X POST https://players.api.brightcove.com/v1/accounts/$ACCOUNT/players/$PLAYER/publish | python -mjson.tool
@@ -90,7 +90,7 @@ You should see some new fields in the response this time:
 Grab the `url` and try it out in your browser. At this point, you could use this player on your site by pasting in the `embed_code`.
 
 ## Customizing a Player
-You can further customize your player by adding scripts, stylesheets, and plugins. One common reason for customizing a player is to add advertisements. If you're using Doubleclick for advertisments, you would use the [IMA3 plugin](http://docs.brightcove.com/en/video-cloud/players/plugins/ima-plugin.html) to manager ads for your player. We can add the IMA3 plugin by patching the player we've been working on up to this point. First, modify the configuration you've been creating for the player:
+You can further customize your player by adding scripts, stylesheets, and plugins. One common reason for customizing a player is to add advertisements. If you're using Doubleclick for advertisments, you would use the [IMA3 plugin](http://docs.brightcove.com/en/video-cloud/players/plugins/ima-plugin.html) to manage ads for your player. We can add the IMA3 plugin by patching the player we've been working on up to this point. First, modify the configuration you've created for the player:
 
 ```json
 {
@@ -157,7 +157,7 @@ Make sure to save the embed `id` for later:
 export EMBED1=c1730f23-3d9f-4b8f-a643-e581cd24ba27
 ```
 
-You can create another embed based on the same player with an alternate stylesheet, too. Create a file called embed2.json:
+You can create another embed from the same player with an alternate stylesheet, too. Create a file called embed2.json:
 
 ```json
 {
