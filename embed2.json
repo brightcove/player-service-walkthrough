@@ -1,6 +1,11 @@
 {
-  "stylesheets": [
-    "https://players.brightcove.com/videojs/plugins/videojs-ima3/1.1.0/videojs.ima3.min.css",
-    "https://players.brightcove.com/2335723943001/service-webinar/alternate.css"
-  ]
+  "media": {
+    "sources": [{
+      "src": "http://brightcove.vo.llnwd.net/d21/unsecured/media/992396400/201402/1658/992396400_3228032452001_BigBuckBunny-320x180.mp4",
+      "type": "video/mp4"
+    }],
+    "poster": {
+      "highres": "http://brightcove.vo.llnwd.net/d21/unsecured/media/992396400/201402/2998/992396400_3228021111001_video-still-for-video-3227873033001.jpg"
+    }
+  }
 }

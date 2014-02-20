@@ -1,7 +1,11 @@
 {
   "media": {
+    "sources": [{
+      "src": "http://vjs.zencdn.net/v/oceans.mp4",
+      "type": "video/mp4"
+    }],
     "poster": {
-      "highres": "//players.brightcove.com/2335723943001/service-webinar/oceans-alternate.jpg"
+      "highres": "http://www.videojs.com/img/poster.jpg"
     }
   }
 }
