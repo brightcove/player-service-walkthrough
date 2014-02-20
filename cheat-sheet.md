@@ -57,7 +57,7 @@ Now that you have a player you will likely want to make it your own.  To do that
 }
 ```
 
-This configuration specifies an different stylesheet that you would like applied to your player.  This will change the color of the volume control from fuschia to orange.
+This configuration specifies a different stylesheet that you would like applied to your player.  This will change the color of the volume control from fuschia to orange.
 
 We'll use curl to update our player with this configuration:
 
