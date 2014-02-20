@@ -7,5 +7,6 @@
     "poster": {
       "highres": "http://brightcove.vo.llnwd.net/d21/unsecured/media/992396400/201402/2998/992396400_3228021111001_video-still-for-video-3227873033001.jpg"
     }
-  }
+  },
+  "autoplay":"true"
 }
