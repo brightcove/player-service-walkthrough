@@ -7,6 +7,7 @@ To follow along, you'll need:
  * A terminal application with [CURL](http://curl.haxx.se)
  * A text editor
  * A Video Cloud account
+ * Your Video Cloud Account ID (you can get this from right under the welcome message in the [Video Cloud Studio](https://videocloud.brightcove.com/))
 
 ## Documentation
  * [Player Service Tour](http://docs.brightcove.com/en/video-cloud/players/guides/playertour.html)
@@ -57,7 +58,7 @@ Now that you have a player you will likely want to make it your own.  To do that
 }
 ```
 
-This configuration specifies an different stylesheet that you would like applied to your player.  This will change the color of the volume control from fuschia to orange.
+This configuration specifies a different stylesheet that you would like applied to your player.  This will change the color of the volume control from fuschia to orange.
 
 We'll use curl to update our player with this configuration:
 
@@ -169,3 +170,38 @@ curl --user $EMAIL -X POST https://players.api.brightcove.com/v1/accounts/$ACCOU
 ```
 
 After a brief processing time when you refresh your published embed URL(s) you should see the preroll ad there as well.
+
+
+## One More Embed
+
+As mentioned earlier embeds can set any configuration setting they would like.  When doing so these settings will apply only to that embed.  Let's create one more embed.  Save this as embed2.json:
+
+```json
+{
+  "media": {
+    "sources": [{
+      "src": "http://brightcove.vo.llnwd.net/d21/unsecured/media/992396400/201402/1658/992396400_3228032452001_BigBuckBunny-320x180.mp4",
+      "type": "video/mp4"
+    }],
+    "poster": {
+      "highres": "http://brightcove.vo.llnwd.net/d21/unsecured/media/992396400/201402/2998/992396400_3228021111001_video-still-for-video-3227873033001.jpg"
+    }
+  },
+  "autoplay":"true"
+}
+```
+
+Create it:
+
+```sh
+curl --user $EMAIL -d @embed2.json -X POST -H "Content-Type: application/json" https://players.api.brightcove.com/v1/accounts/$ACCOUNT/players/$PLAYER/embeds | python -mjson.tool
+```
+
+And publish it:
+
+```sh
+export EMBED="the ID returned by the create"
+curl --user $EMAIL -d @embed.json -X POST -H "Content-Type: application/json" https://players.api.brightcove.com/v1/accounts/$ACCOUNT/players/$PLAYER/embeds/$EMBED/publish | python -mjson.tool
+```
+
+Give it a few seconds and then load up the url returned in a browser.  Once it is published you should see a player with preroll ads load and automatically start playing.  But if you reload other embeds from the same player they will not automatically play.
