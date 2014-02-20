@@ -126,7 +126,7 @@ The result will look like this:
 }
 ```
 
-You should see some new fields in the response this time.  Notice there are no longer preview* items.  Instead you will see url and embed_code.  Grab the `url` and try it out in your browser. 
+You should see some new fields in the response this time.  Notice there are no longer preview_ items.  Instead you will see the production url and embed_code.  Grab the `url` and try it out in your browser. 
 
 At this point, you could use this player on your site by pasting in the `embed_code`.  There will also be an in page embed added to this response.  For now you can access it by using the URL and replacing 'index.html' with 'in_page.embed'.
 
