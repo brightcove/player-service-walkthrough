@@ -7,6 +7,7 @@ To follow along, you'll need:
  * A terminal application with [CURL](http://curl.haxx.se)
  * A text editor
  * A Video Cloud account
+ * Your Video Cloud Account ID (you can get this from right under the welcome message in the [Video Cloud Studio](https://videocloud.brightcove.com/))
 
 ## Documentation
  * [Player Service Tour](http://docs.brightcove.com/en/video-cloud/players/guides/playertour.html)
