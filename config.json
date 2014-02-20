@@ -1,23 +1,5 @@
 {
-  "media": {
-    "sources": [{
-      "src": "http://vjs.zencdn.net/v/oceans.mp4",
-      "type": "video/mp4"
-    }],
-    "poster": {
-      "highres": "http://www.videojs.com/img/poster.jpg"
-    }
-  },
-  "scripts": [
-    "https://players.brightcove.com/videojs/plugins/videojs-ima3/1.1.0/videojs.ima3.min.js"
-  ],
   "stylesheets": [
-    "https://players.brightcove.com/videojs/plugins/videojs-ima3/1.1.0/videojs.ima3.min.css"
-  ],
-  "plugins": [{
-    "name": "ima3",
-    "options": {
-      "adSwf": "https://players.brightcove.com/videojs/plugins/videojs-ima3/1.1.0/VideoJSIMA3.swf"
-    }
-  }]
+    "https://players.brightcove.com/2335723943001/service-webinar/alternate.css"
+  ]
 }
