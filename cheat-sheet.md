@@ -21,7 +21,7 @@ To keep all the code examples consistent, we'll be using environment variables t
 export ACCOUNT='Your Video Cloud account ID'
 export EMAIL='The email address for you Video Cloud account'
 ```
-i
+
 Now, let's create a player:
 
 ```sh
