@@ -140,16 +140,16 @@ One common reason for customizing a player is to add advertisements. If you're u
 ```json
 {
   "scripts": [
-    "https://players.brightcove.com/videojs/plugins/videojs-ima3/1.1.0/videojs.ima3.min.js"
+    "https://players.brightcove.com/videojs-ima3/videojs.ima3.min.js"
   ],
   "stylesheets": [
-    "https://players.brightcove.com/videojs/plugins/videojs-ima3/1.1.0/videojs.ima3.min.css",
+    "https://players.brightcove.com/videojs-ima3/videojs.ima3.min.css",
     "https://players.brightcove.com/2335723943001/service-webinar/alternate.css"
   ],
   "plugins": [{
     "name": "ima3",
     "options": {
-      "adSwf": "https://players.brightcove.com/videojs/plugins/videojs-ima3/1.1.0/VideoJSIMA3.swf"
+      "adSwf": "https://players.brightcove.com/videojs-ima3/VideoJSIMA3.swf"
     }
   }]
 }
